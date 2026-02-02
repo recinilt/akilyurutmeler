@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Son Kare Yakalayıcı</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #00d9ff;
+            margin-bottom: 30px;
+        }
+        .container {
+            background: #16213e;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .input-section {
+            margin-bottom: 20px;
+        }
+        .input-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #00d9ff;
+        }
+        input[type="file"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px dashed #00d9ff;
+            border-radius: 8px;
+            background: #0f3460;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        input[type="file"]:hover {
+            background: #1a4a7a;
+            border-color: #00ffcc;
+        }
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        video {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 8px;
+            background: #000;
+        }
+        .info {
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        .info span {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        button {
+            flex: 1;
+            min-width: 150px;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .btn-capture {
+            background: linear-gradient(135deg, #00d9ff, #00ffcc);
+            color: #1a1a2e;
+        }
+        .btn-capture:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,217,255,0.4);
+        }
+        .btn-download {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: #1a1a2e;
+        }
+        .btn-download:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+        }
+        .result-section {
+            margin-top: 25px;
+            text-align: center;
+            display: none;
+        }
+        .result-section.show {
+            display: block;
+        }
+        .result-section h3 {
+            color: #00ffcc;
+            margin-bottom: 15px;
+        }
+        canvas {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .status {
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        .status.loading {
+            background: #feca57;
+            color: #1a1a2e;
+        }
+        .status.success {
+            background: #00ffcc;
+            color: #1a1a2e;
+        }
+        .status.error {
+            background: #ff6b6b;
+            color: #fff;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎬 Video Son Kare Yakalayıcı</h1>
+    
+    <div class="container">
+        <div class="input-section">
+            <label for="videoInput">📁 Video Dosyası Seçin:</label>
+            <input type="file" id="videoInput" accept="video/*">
+        </div>
+        
+        <div id="statusBox" class="status hidden"></div>
+        
+        <div class="video-container">
+            <video id="videoPlayer" controls></video>
+        </div>
+        
+        <div id="infoBox" class="info hidden">
+            <p>📊 Süre: <span id="duration">-</span> saniye</p>
+            <p>📐 Çözünürlük: <span id="resolution">-</span></p>
+        </div>
+        
+        <div class="buttons">
+            <button id="captureBtn" class="btn-capture" disabled>📸 Son Kareyi Yakala</button>
+            <button id="downloadBtn" class="btn-download" disabled>💾 PNG İndir</button>
+        </div>
+        
+        <div id="resultSection" class="result-section">
+            <h3>✅ Yakalanan Son Kare:</h3>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const videoInput = document.getElementById('videoInput');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const captureBtn = document.getElementById('captureBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const statusBox = document.getElementById('statusBox');
+        const infoBox = document.getElementById('infoBox');
+        const resultSection = document.getElementById('resultSection');
+        const durationSpan = document.getElementById('duration');
+        const resolutionSpan = document.getElementById('resolution');
+
+        let capturedImageData = null;
+
+        function showStatus(message, type) {
+            statusBox.textContent = message;
+            statusBox.className = `status ${type}`;
+            statusBox.classList.remove('hidden');
+        }
+
+        function hideStatus() {
+            statusBox.classList.add('hidden');
+        }
+
+        // Video seçildiğinde
+        videoInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            // Reset
+            captureBtn.disabled = true;
+            downloadBtn.disabled = true;
+            resultSection.classList.remove('show');
+            capturedImageData = null;
+
+            showStatus('⏳ Video yükleniyor...', 'loading');
+
+            const url = URL.createObjectURL(file);
+            videoPlayer.src = url;
+        });
+
+        // Metadata yüklendiğinde
+        videoPlayer.addEventListener('loadedmetadata', function() {
+            hideStatus();
+            infoBox.classList.remove('hidden');
+            
+            durationSpan.textContent = videoPlayer.duration.toFixed(3);
+            resolutionSpan.textContent = `${videoPlayer.videoWidth} x ${videoPlayer.videoHeight}`;
+            
+            captureBtn.disabled = false;
+            showStatus('✅ Video hazır! "Son Kareyi Yakala" butonuna tıklayın.', 'success');
+        });
+
+        // Hata durumu
+        videoPlayer.addEventListener('error', function() {
+            showStatus('❌ Video yüklenemedi! Lütfen geçerli bir video dosyası seçin.', 'error');
+        });
+
+        // Son kareyi yakala
+        captureBtn.addEventListener('click', function() {
+            if (videoPlayer.duration && videoPlayer.duration > 0) {
+                showStatus('⏳ Son kareye gidiliyor...', 'loading');
+                captureBtn.disabled = true;
+
+                // Son kareye git (duration - küçük bir değer)
+                videoPlayer.currentTime = videoPlayer.duration - 0.001;
+            }
+        });
+
+        // Seek tamamlandığında frame'i yakala
+        videoPlayer.addEventListener('seeked', function() {
+            // Sadece son kare yakalama işlemi için
+            if (Math.abs(videoPlayer.currentTime - (videoPlayer.duration - 0.001)) < 0.1) {
+                captureFrame();
+            }
+        });
+
+        function captureFrame() {
+            // Canvas boyutlarını ayarla
+            canvas.width = videoPlayer.videoWidth;
+            canvas.height = videoPlayer.videoHeight;
+
+            // Frame'i canvas'a çiz
+            ctx.drawImage(videoPlayer, 0, 0, canvas.width, canvas.height);
+
+            // Data URL olarak kaydet
+            capturedImageData = canvas.toDataURL('image/png'); 
+
+            // UI güncelle
+            resultSection.classList.add('show');
+            downloadBtn.disabled = false;
+            captureBtn.disabled = false;
+            
+            showStatus('✅ Son kare başarıyla yakalandı!', 'success');
+        }
+
+        // PNG olarak indir
+        downloadBtn.addEventListener('click', function() {
+            if (!capturedImageData) return;
+
+            const link = document.createElement('a');
+            link.download = 'video-son-kare.png';
+            link.href = capturedImageData;
+            link.click();
+        });
+    </script>
+</body>
+</html>

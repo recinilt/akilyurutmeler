@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Video Birleştirici (Basit)</title>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .player-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        #mainVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #888;
+            pointer-events: none;
+        }
+
+        .video-overlay.hidden { display: none; }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #00ff88, #00cc6a);
+            color: #000;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff4757, #ff3838);
+            color: #fff;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .progress-container { width: 100%; margin-top: 15px; }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #00ff88);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .time-display {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        .now-playing {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .now-playing span { color: #00d4ff; font-weight: 600; }
+
+        .playlist-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            max-height: 80vh;
+        }
+
+        .playlist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .playlist-header h2 { font-size: 1.3rem; }
+
+        #fileInput { display: none; }
+
+        .playlist {
+            flex: 1;
+            overflow-y: auto;
+            min-height: 200px;
+        }
+
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: grab;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .playlist-item:hover { background: rgba(255, 255, 255, 0.1); }
+        .playlist-item.playing { border-color: #00d4ff; background: rgba(0, 212, 255, 0.1); }
+        .playlist-item.sortable-ghost { opacity: 0.4; background: rgba(0, 212, 255, 0.2); }
+
+        .drag-handle { color: #666; cursor: grab; font-size: 1.2rem; }
+
+        .item-info { flex: 1; min-width: 0; }
+
+        .item-name {
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 0.9rem;
+        }
+
+        .item-duration { font-size: 0.75rem; color: #888; }
+
+        .item-index {
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .item-remove {
+            background: none;
+            border: none;
+            color: #ff4757;
+            cursor: pointer;
+            font-size: 1.2rem;
+            opacity: 0.6;
+        }
+
+        .item-remove:hover { opacity: 1; }
+
+        .empty-playlist {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        .merge-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .merge-progress { margin-top: 15px; }
+
+        .merge-progress-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .merge-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b6b, #ffa502, #00ff88);
+            background-size: 200% 100%;
+            animation: gradientMove 2s linear infinite;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .merge-status {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .download-section { margin-top: 15px; text-align: center; }
+
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #00ff88, #00cc6a);
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 8px;
+            border-left: 4px solid #00d4ff;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            z-index: 1001;
+        }
+
+        .toast.show { transform: translateX(0); }
+        .toast.error { border-left-color: #ff4757; }
+        .toast.success { border-left-color: #00ff88; }
+
+        .info-box {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .info-box h4 { color: #00d4ff; margin-bottom: 8px; }
+        .info-box ul { margin-left: 20px; color: #aaa; }
+        .info-box li { margin: 5px 0; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Video Birleştirici</h1>
+        <p class="subtitle">Videoları sıralayın, oynatın ve tek dosya olarak indirin</p>
+
+        <div class="info-box">
+            <h4>ℹ️ Nasıl Çalışır?</h4>
+            <ul>
+                <li>Video ekleyin ve sürükle-bırak ile sıralayın</li>
+                <li>"Birleştir" butonuna basınca videolar sırayla kaydedilir</li>
+                <li>Canvas + MediaRecorder ile birleştirme yapılır</li>
+                <li>WebM formatında indirilir (tarayıcı desteğine göre)</li>
+            </ul>
+        </div>
+
+        <div class="main-layout">
+            <div class="player-section">
+                <div class="video-container">
+                    <video id="mainVideo"></video>
+                    <div class="video-overlay" id="videoOverlay">
+                        <div style="font-size: 4rem;">🎬</div>
+                        <p>Video eklemek için sağdaki<br>"+ Video Ekle" butonunu kullanın</p>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span>
+                        <span id="totalTime">0:00</span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="btnPrev" disabled>⏮️ Önceki</button>
+                    <button class="btn btn-primary" id="btnPlayPause" disabled>▶️ Oynat</button>
+                    <button class="btn btn-primary" id="btnNext" disabled>Sonraki ⏭️</button>
+                    <button class="btn btn-danger" id="btnStop" disabled>⏹️ Durdur</button>
+                </div>
+
+                <div class="now-playing" id="nowPlaying" style="display: none;">
+                    🎵 Şimdi Oynatılıyor: <span id="nowPlayingTitle">-</span>
+                </div>
+            </div>
+
+            <div class="playlist-section">
+                <div class="playlist-header">
+                    <h2>📋 Oynatma Listesi</h2>
+                    <div>
+                        <input type="file" id="fileInput" accept="video/*" multiple>
+                        <button class="btn btn-success" id="btnAddVideo">+ Video Ekle</button>
+                    </div>
+                </div>
+
+                <div class="playlist" id="playlist">
+                    <div class="empty-playlist" id="emptyPlaylist">
+                        <div style="font-size: 3rem;">📂</div>
+                        <p>Henüz video eklenmedi<br>Sürükle-bırak ile sıralayabilirsiniz</p>
+                    </div>
+                </div>
+
+                <div class="merge-section">
+                    <button class="btn btn-success" id="btnMerge" disabled style="width: 100%;">
+                        🔗 Videoları Birleştir ve İndir
+                    </button>
+
+                    <div class="merge-progress" id="mergeProgress" style="display: none;">
+                        <div class="merge-progress-bar">
+                            <div class="merge-progress-fill" id="mergeProgressFill"></div>
+                        </div>
+                        <div class="merge-status" id="mergeStatus">Hazırlanıyor...</div>
+                    </div>
+
+                    <div class="download-section" id="downloadSection" style="display: none;">
+                        <a href="#" class="download-link" id="downloadLink" download="birlesik-video.webm">
+                            ⬇️ Birleşik Videoyu İndir
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <!-- Hidden canvas for recording -->
+    <canvas id="mergeCanvas" style="display: none;"></canvas>
+    <video id="mergeVideo" style="display: none;" muted></video>
+
+    <script>
+        // ============ STATE ============
+        const state = {
+            videos: [],
+            currentIndex: -1,
+            isPlaying: false,
+            isMerging: false
+        };
+
+        // ============ DOM ELEMENTS ============
+        const elements = {
+            mainVideo: document.getElementById('mainVideo'),
+            videoOverlay: document.getElementById('videoOverlay'),
+            progressBar: document.getElementById('progressBar'),
+            progressFill: document.getElementById('progressFill'),
+            currentTime: document.getElementById('currentTime'),
+            totalTime: document.getElementById('totalTime'),
+            btnPrev: document.getElementById('btnPrev'),
+            btnPlayPause: document.getElementById('btnPlayPause'),
+            btnNext: document.getElementById('btnNext'),
+            btnStop: document.getElementById('btnStop'),
+            btnAddVideo: document.getElementById('btnAddVideo'),
+            btnMerge: document.getElementById('btnMerge'),
+            fileInput: document.getElementById('fileInput'),
+            playlist: document.getElementById('playlist'),
+            emptyPlaylist: document.getElementById('emptyPlaylist'),
+            nowPlaying: document.getElementById('nowPlaying'),
+            nowPlayingTitle: document.getElementById('nowPlayingTitle'),
+            mergeProgress: document.getElementById('mergeProgress'),
+            mergeProgressFill: document.getElementById('mergeProgressFill'),
+            mergeStatus: document.getElementById('mergeStatus'),
+            downloadSection: document.getElementById('downloadSection'),
+            downloadLink: document.getElementById('downloadLink'),
+            toast: document.getElementById('toast'),
+            mergeCanvas: document.getElementById('mergeCanvas'),
+            mergeVideo: document.getElementById('mergeVideo')
+        };
+
+        // ============ UTILITY FUNCTIONS ============
+        function formatTime(seconds) {
+            if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function showToast(message, type = 'info') {
+            elements.toast.textContent = message;
+            elements.toast.className = `toast ${type} show`;
+            setTimeout(() => elements.toast.classList.remove('show'), 3000);
+        }
+
+        // ============ PLAYLIST MANAGEMENT ============
+        function updatePlaylistUI() {
+            const hasVideos = state.videos.length > 0;
+            elements.emptyPlaylist.style.display = hasVideos ? 'none' : 'block';
+            elements.btnMerge.disabled = state.videos.length < 2 || state.isMerging;
+
+            const items = elements.playlist.querySelectorAll('.playlist-item');
+            items.forEach(item => item.remove());
+
+            state.videos.forEach((video, index) => {
+                const item = document.createElement('div');
+                item.className = `playlist-item ${index === state.currentIndex ? 'playing' : ''}`;
+                item.dataset.index = index;
+                item.innerHTML = `
+                    <span class="drag-handle">⋮⋮</span>
+                    <span class="item-index">${index + 1}</span>
+                    <div class="item-info">
+                        <div class="item-name" title="${video.name}">${video.name}</div>
+                        <div class="item-duration">${formatTime(video.duration)}</div>
+                    </div>
+                    <button class="item-remove" data-index="${index}">✕</button>
+                `;
+
+                item.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('item-remove')) playVideo(index);
+                });
+
+                item.querySelector('.item-remove').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    removeVideo(index);
+                });
+
+                elements.playlist.appendChild(item);
+            });
+
+            updateControlsState();
+        }
+
+        function addVideos(files) {
+            Array.from(files).forEach(file => {
+                const video = document.createElement('video');
+                video.preload = 'metadata';
+
+                video.onloadedmetadata = () => {
+                    state.videos.push({
+                        file: file,
+                        name: file.name,
+                        duration: video.duration,
+                        url: URL.createObjectURL(file),
+                        width: video.videoWidth,
+                        height: video.videoHeight
+                    });
+                    updatePlaylistUI();
+                    if (state.currentIndex === -1) playVideo(0);
+                };
+
+                video.onerror = () => showToast(`"${file.name}" yüklenemedi`, 'error');
+                video.src = URL.createObjectURL(file);
+            });
+        }
+
+        function removeVideo(index) {
+            URL.revokeObjectURL(state.videos[index].url);
+            state.videos.splice(index, 1);
+
+            if (state.currentIndex >= state.videos.length) {
+                state.currentIndex = state.videos.length - 1;
+            }
+            if (state.currentIndex === index) {
+                if (state.videos.length > 0) {
+                    playVideo(Math.min(index, state.videos.length - 1));
+                } else {
+                    stopPlayback();
+                }
+            } else if (index < state.currentIndex) {
+                state.currentIndex--;
+            }
+
+            updatePlaylistUI();
+        }
+
+        // ============ VIDEO PLAYBACK ============
+        function playVideo(index) {
+            if (index < 0 || index >= state.videos.length) return;
+
+            state.currentIndex = index;
+            const video = state.videos[index];
+
+            elements.mainVideo.src = video.url;
+            elements.mainVideo.play().catch(e => showToast('Oynatma başlatılamadı', 'error'));
+
+            elements.videoOverlay.classList.add('hidden');
+            elements.nowPlaying.style.display = 'block';
+            elements.nowPlayingTitle.textContent = video.name;
+
+            state.isPlaying = true;
+            updatePlaylistUI();
+        }
+
+        function togglePlayPause() {
+            if (state.videos.length === 0) return;
+            if (state.currentIndex === -1) { playVideo(0); return; }
+
+            if (elements.mainVideo.paused) {
+                elements.mainVideo.play();
+                state.isPlaying = true;
+            } else {
+                elements.mainVideo.pause();
+                state.isPlaying = false;
+            }
+            updateControlsState();
+        }
+
+        function playNext() {
+            if (state.currentIndex < state.videos.length - 1) playVideo(state.currentIndex + 1);
+        }
+
+        function playPrev() {
+            if (state.currentIndex > 0) playVideo(state.currentIndex - 1);
+        }
+
+        function stopPlayback() {
+            elements.mainVideo.pause();
+            elements.mainVideo.currentTime = 0;
+            elements.mainVideo.src = '';
+            state.currentIndex = -1;
+            state.isPlaying = false;
+
+            elements.videoOverlay.classList.remove('hidden');
+            elements.nowPlaying.style.display = 'none';
+            elements.progressFill.style.width = '0%';
+            elements.currentTime.textContent = '0:00';
+            elements.totalTime.textContent = '0:00';
+
+            updatePlaylistUI();
+        }
+
+        function updateControlsState() {
+            const hasVideos = state.videos.length > 0;
+            const hasMultiple = state.videos.length > 1;
+
+            elements.btnPlayPause.disabled = !hasVideos;
+            elements.btnStop.disabled = !hasVideos || state.currentIndex === -1;
+            elements.btnPrev.disabled = !hasMultiple || state.currentIndex <= 0;
+            elements.btnNext.disabled = !hasMultiple || state.currentIndex >= state.videos.length - 1;
+
+            elements.btnPlayPause.innerHTML = state.isPlaying && !elements.mainVideo.paused
+                ? '⏸️ Duraklat' : '▶️ Oynat';
+        }
+
+        // ============ VIDEO EVENTS ============
+        elements.mainVideo.addEventListener('timeupdate', () => {
+            const progress = (elements.mainVideo.currentTime / elements.mainVideo.duration) * 100;
+            elements.progressFill.style.width = `${progress}%`;
+            elements.currentTime.textContent = formatTime(elements.mainVideo.currentTime);
+        });
+
+        elements.mainVideo.addEventListener('loadedmetadata', () => {
+            elements.totalTime.textContent = formatTime(elements.mainVideo.duration);
+        });
+
+        elements.mainVideo.addEventListener('ended', () => {
+            if (state.currentIndex < state.videos.length - 1) {
+                playNext();
+            } else {
+                state.isPlaying = false;
+                updateControlsState();
+                showToast('Tüm videolar oynatıldı ✓', 'success');
+            }
+        });
+
+        elements.mainVideo.addEventListener('play', () => { state.isPlaying = true; updateControlsState(); });
+        elements.mainVideo.addEventListener('pause', () => { state.isPlaying = false; updateControlsState(); });
+
+        elements.progressBar.addEventListener('click', (e) => {
+            const rect = elements.progressBar.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            elements.mainVideo.currentTime = percent * elements.mainVideo.duration;
+        });
+
+        // ============ BUTTON EVENTS ============
+        elements.btnAddVideo.addEventListener('click', () => elements.fileInput.click());
+        elements.fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                addVideos(e.target.files);
+                e.target.value = '';
+            }
+        });
+
+        elements.btnPlayPause.addEventListener('click', togglePlayPause);
+        elements.btnNext.addEventListener('click', playNext);
+        elements.btnPrev.addEventListener('click', playPrev);
+        elements.btnStop.addEventListener('click', stopPlayback);
+
+        // ============ DRAG & DROP SORTING ============
+        new Sortable(elements.playlist, {
+            animation: 150,
+            handle: '.drag-handle',
+            ghostClass: 'sortable-ghost',
+            filter: '.empty-playlist',
+            onEnd: (evt) => {
+                const oldIndex = evt.oldIndex - 1;
+                const newIndex = evt.newIndex - 1;
+
+                if (oldIndex >= 0 && newIndex >= 0 && oldIndex !== newIndex) {
+                    const [moved] = state.videos.splice(oldIndex, 1);
+                    state.videos.splice(newIndex, 0, moved);
+
+                    if (state.currentIndex === oldIndex) {
+                        state.currentIndex = newIndex;
+                    } else if (oldIndex < state.currentIndex && newIndex >= state.currentIndex) {
+                        state.currentIndex--;
+                    } else if (oldIndex > state.currentIndex && newIndex <= state.currentIndex) {
+                        state.currentIndex++;
+                    }
+
+                    updatePlaylistUI();
+                }
+            }
+        });
+
+        // File drag & drop
+        document.body.addEventListener('dragover', (e) => { e.preventDefault(); e.stopPropagation(); });
+        document.body.addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('video/'));
+            if (files.length > 0) addVideos(files);
+        });
+
+        // ============ VIDEO MERGE (Canvas + MediaRecorder) ============
+        async function mergeVideos() {
+            if (state.videos.length < 2) {
+                showToast('En az 2 video gerekli', 'error');
+                return;
+            }
+
+            state.isMerging = true;
+            elements.btnMerge.disabled = true;
+            elements.mergeProgress.style.display = 'block';
+            elements.downloadSection.style.display = 'none';
+            elements.mergeProgressFill.style.width = '0%';
+            elements.mergeStatus.textContent = 'Başlatılıyor...';
+
+            const canvas = elements.mergeCanvas;
+            const ctx = canvas.getContext('2d');
+            const mergeVideo = elements.mergeVideo;
+
+            // Find max dimensions
+            let maxWidth = 0, maxHeight = 0;
+            state.videos.forEach(v => {
+                if (v.width > maxWidth) maxWidth = v.width;
+                if (v.height > maxHeight) maxHeight = v.height;
+            });
+
+            // Default if no dimensions
+            if (maxWidth === 0) maxWidth = 1280;
+            if (maxHeight === 0) maxHeight = 720;
+
+            canvas.width = maxWidth;
+            canvas.height = maxHeight;
+
+            // Setup MediaRecorder
+            const stream = canvas.captureStream(30);
+            
+            // Try to get audio context for merging audio
+            let audioCtx, audioDestination;
+            try {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                audioDestination = audioCtx.createMediaStreamDestination();
+                
+                // Add audio track to stream
+                audioDestination.stream.getAudioTracks().forEach(track => {
+                    stream.addTrack(track);
+                });
+            } catch (e) {
+                console.warn('Audio context not available:', e);
+            }
+
+            const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
+                ? 'video/webm;codecs=vp9'
+                : MediaRecorder.isTypeSupported('video/webm;codecs=vp8')
+                    ? 'video/webm;codecs=vp8'
+                    : 'video/webm';
+
+            const recorder = new MediaRecorder(stream, {
+                mimeType: mimeType,
+                videoBitsPerSecond: 5000000
+            });
+
+            const chunks = [];
+            recorder.ondataavailable = (e) => {
+                if (e.data.size > 0) chunks.push(e.data);
+            };
+
+            recorder.onstop = () => {
+                const blob = new Blob(chunks, { type: mimeType });
+                const url = URL.createObjectURL(blob);
+
+                elements.downloadLink.href = url;
+                elements.downloadLink.download = `birlesik-video-${Date.now()}.webm`;
+                elements.downloadSection.style.display = 'block';
+                elements.mergeStatus.textContent = 'Tamamlandı! ✓';
+                elements.mergeProgressFill.style.width = '100%';
+
+                state.isMerging = false;
+                elements.btnMerge.disabled = state.videos.length < 2;
+                showToast('Video birleştirme tamamlandı!', 'success');
+                
+                if (audioCtx) audioCtx.close();
+            };
+
+            recorder.start();
+
+            // Calculate total duration for progress
+            const totalDuration = state.videos.reduce((sum, v) => sum + v.duration, 0);
+            let processedDuration = 0;
+
+            // Process each video
+            for (let i = 0; i < state.videos.length; i++) {
+                const video = state.videos[i];
+                elements.mergeStatus.textContent = `İşleniyor: ${video.name} (${i + 1}/${state.videos.length})`;
+
+                await new Promise((resolve, reject) => {
+                    mergeVideo.src = video.url;
+                    mergeVideo.muted = false;
+                    
+                    // Connect audio if available
+                    let audioSource;
+                    if (audioCtx && audioDestination) {
+                        try {
+                            audioSource = audioCtx.createMediaElementSource(mergeVideo);
+                            audioSource.connect(audioDestination);
+                            audioSource.connect(audioCtx.destination); // Also play locally (muted video)
+                        } catch (e) {
+                            console.warn('Could not connect audio source:', e);
+                        }
+                    }
+
+                    mergeVideo.onloadeddata = () => {
+                        mergeVideo.play();
+
+                        const drawFrame = () => {
+                            if (mergeVideo.paused || mergeVideo.ended) return;
+
+                            // Clear and draw centered
+                            ctx.fillStyle = '#000';
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                            const scale = Math.min(
+                                canvas.width / mergeVideo.videoWidth,
+                                canvas.height / mergeVideo.videoHeight
+                            );
+                            const w = mergeVideo.videoWidth * scale;
+                            const h = mergeVideo.videoHeight * scale;
+                            const x = (canvas.width - w) / 2;
+                            const y = (canvas.height - h) / 2;
+
+                            ctx.drawImage(mergeVideo, x, y, w, h);
+
+                            // Update progress
+                            const currentProgress = ((processedDuration + mergeVideo.currentTime) / totalDuration) * 100;
+                            elements.mergeProgressFill.style.width = `${currentProgress}%`;
+
+                            requestAnimationFrame(drawFrame);
+                        };
+
+                        drawFrame();
+                    };
+
+                    mergeVideo.onended = () => {
+                        processedDuration += video.duration;
+                        
+                        // Disconnect audio source if it was created
+                        if (audioSource) {
+                            try {
+                                audioSource.disconnect();
+                            } catch (e) {}
+                        }
+                        
+                        resolve();
+                    };
+
+                    mergeVideo.onerror = (e) => {
+                        console.error('Video error:', e);
+                        reject(new Error(`Video yüklenemedi: ${video.name}`));
+                    };
+                });
+            }
+
+            recorder.stop();
+        }
+
+        elements.btnMerge.addEventListener('click', mergeVideos);
+
+        // ============ INITIALIZATION ============
+        document.addEventListener('DOMContentLoaded', () => {
+            updatePlaylistUI();
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT') return;
+
+            switch (e.code) {
+                case 'Space':
+                    e.preventDefault();
+                    togglePlayPause();
+                    break;
+                case 'ArrowLeft':
+                    if (e.ctrlKey) playPrev();
+                    else elements.mainVideo.currentTime -= 5;
+                    break;
+                case 'ArrowRight':
+                    if (e.ctrlKey) playNext();
+                    else elements.mainVideo.currentTime += 5;
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
