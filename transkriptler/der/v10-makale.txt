@@ -1,0 +1,407 @@
+# Vahdet-i Vücut Meclisi: ETA Fonksiyonu, Anlam Arayışı, Vahdet Ayetleri ve Ayna Metaforu
+
+## Giriş
+
+Bu meclis, önceki toplantıda ele alınamayan konuların işlenmesi amacıyla düzenlenmiş ekstra bir çalışmadır. Dört ana konu ele alınacaktır:
+
+1. ETA fonksiyonu neden var?
+2. On bin yıldır insanın ve evrenin nesnel, mutlak bir anlamının bulunamamasının nedeni
+3. Kur'an Musafı'ndaki vahdet-i vücuda işaret eden ayetler
+4. Ayna metaforu ve "Ayna kendini görebilir mi?" sorusu
+
+Ek olarak, vakit kalırsa non-dualistler hakkında bir değerlendirme yapılacaktır (bu konu cuma gününe ertelenmiştir).
+
+---
+
+## Birinci Bölüm: ETA Fonksiyonu
+
+### Kadera ve Kaza: Temel Tanımlar
+
+"Kadera" Arapça'da ölçü, formül demektir. "Kaza" ise sonuçtur. Kadim kitapların %99.9'unda kader ve kaza kavramları geçer. Bir formülde değişkenler (A, B, C vb.) yerine geldiğinde, eşittir işaretinin sağında bir sonuç (kaza) ortaya çıkar.
+
+Bu evrendeki olayların çok büyük bir yüzdesi, ister adına nedensellik yasası densin, ister eş zamanlılık, ister vesilecilik, birbirini takip eden neden-sonuç zincirleri şeklinde devam etmektedir. İnsan zihni milyonlarca yıldır bu gözlemler sonucu evrilmiştir. Hatta taklitçi papağanların bile zihni, birinci ve ikinci derece soyutlama yapabilecek şekilde bu gözlemler sonucu şekillenmiştir.
+
+### Hayvansal Zeka Örnekleri
+
+Karga örneği: Karga cevizi alıp trafik ışıklarının üstünde bekleyen arabaların önüne yola atıyor. Araba üzerinden geçtiğinde ceviz kırılıyor. Sonra inip arabalar gittikten sonra içini afiyetle yiyebiliyor.
+
+Kavanoz örneği: Bir kavanozda su var, gagası yetişmiyorsa kavanozun içine beş-altı tane çakıl taşı atıp suyu yükseltiyor ve suyunu içebiliyor.
+
+Bu örnekler, hayvanlarda bile belli bir oranda gözlem sonucu vehimlerinde (İbn-i Sina'nın tasnifiyle vehimiyetlerinde) nedensellik anlayışının oluştuğunu göstermektedir. Sapiens'in zihni ise milyonlarca yıldan beri bunu gözlemleyip çok üst düzey bir seviyeye, bilinç ve akılda ulaştığı için muhteşem teknolojik aletleri yapabilmekte ve çok daha fazlasını gerçekleştirebilmektedir.
+
+### Sonsuz Gerileme ve İlk Muharrik
+
+Formüldeki değişkenlerin öncesine bakıldığında sonsuz gerilemeyle karşılaşılır. Her sonucun bir öncesinde bir neden vardır. Örneğin okyanuslardaki akıntıların nedeni dünyanın kendi ekseni etrafında ve güneş etrafında dönmesidir. Dünyanın dönmesinin de bir nedeni vardır ve bu zincir sonsuza kadar geriye gider.
+
+Tarih boyunca filozoflar, özellikle hareket ve oluşun sebebini, ilk sebebi aramışlardır. Anaximandros ve ardından bunu güzel düzenleyen Aristoteles şöyle demişlerdir: Evrendeki hareketin sebebi (hem fiziksel yön değiştirme hareketleri hem de dönüşümler), en başta kendisi hareket etmeyen ve dönüşmeyen bir "ilk hareket ettirici" (ilk muharrik) tarafından verilmiş olmalıdır.
+
+### Yağmur Formülü Örneği
+
+Bir kesit alınarak örnek verilecek olursa:
+
+- **A değişkeni:** Okyanuslarda akıntılar oluşuyor
+- **B değişkeni:** Sıcaklık değişmeye başlıyor (akıntılar sıcak su-soğuk su akıntıları olduğu için büyük delta T'ler, yani sıcaklık farkları yaratıyor)
+- **C değişkeni:** Buharlaşma başlıyor, buhar yükseldiğinde soğuyunca bulutlar oluşuyor
+- **U değişkeni:** Rüzgar çıkıyor (dünya kendi etrafında döndüğü ve sıcaklık değişimleri olduğu için hava yer değiştiriyor)
+- **X değişkeni:** Bulutlar sürüklenmeye başlıyor
+- **Y değişkeni:** Bulutlar karşılaşıp sürtünüyorlar, iç içe geçiyorlar. Su buharı elektron yükü taşıdığından farklı elektron yüklerindeki bulutlar geçişirken elektron akışı meydana geliyor
+- **Z değişkeni:** Hava sıcaklığı belli bir derecenin altındaysa su buharı yoğuşmaya, çok şiddetli ısı farkıyla düşerse donmaya başlıyor
+
+**Sonuç (Kaza):** Şimşek, yıldırım, yağmur, kar, dolu
+
+Elektron akışı bazen çok büyük potansiyellere ulaşır (100.000 volt, 500.000 volt, 1 milyon volt gibi). Havayı delerek toprağa akıyorsa buna yıldırım denir. Potansiyel küçük kalıp sadece bulutlar arasında elektron akışı oluyorsa buna şimşek denir. Gök gürültüsü de bu sürecin bir parçasıdır.
+
+### ETA Fonksiyonunun Tanımı
+
+Bu evrendeki her konuda, sadece fiziksel olayların değil duygusal olayların da bir formülü vardır. Bütün kutsal kitaplarda (din kitapları, matematik kitabı, fizik kitabı, kimya kitabı, biyoloji kitabı dahil) bu geçmektedir. "Biz her şeyi bir ölçüyle yarattık" (bir kadere ile) denilmektedir. Hiçbir istisna konulmadan her şeyin bir ölçüsü olduğu belirtilmektedir.
+
+**Fakat** bazen A, B, C, U, X, Y, Z değişkenleri tam yerine geldiği halde ne şimşek çakıyor, ne yıldırım düşüyor, ne yağmur, ne kar, ne dolu yağıyor. Hiçbir şey olmuyor ve o bulutlar geldiği gibi dağılıp gidiyor, yere bir damla su düşmüyor.
+
+ETA fonksiyonu eşitliğin tam üzerinde durur ve iki şekilde çalışır:
+- **Eşittir:** Değişkenler yerine geldiğinde beklenen sonuç gerçekleşiyor
+- **Eşit değildir:** Değişkenler yerine geldiğinde beklenen sonuç gerçekleşmiyor
+
+Bazen tersinden de işler: Pırıl pırıl bir gökyüzünde, yukarıda ne bulut sürtünmeleri ne şimşek varken bir anda çisilti şeklinde yağmur yağmaya başlayabilir. Yani değişkenler olmasa bile sonuç ortaya çıkabilir.
+
+### Ornithorenk Örneği
+
+Biyoloji kutsal kitabından bir örnek: Omurgalı memeliler yavrularını rahimlerinde büyütüp yavru olarak çıkarırlar ve sonra meme vererek (süt vererek) büyütürler. Bu nedenle "omurgalı memeliler" denir.
+
+Ancak **ornithorenk** (platypus) hayvanı ve bir-iki tane daha benzeri hayvan, milyonlarca omurgalı memeli içinde yavrularını yumurtlayarak doğuruyorlar. Ama sonra emziriyorlar çünkü omurgalı memeliler. Milyonlarca tür var, aynı sınıfın üyeleri, bütün özellikleri uyuyor birbirine ama üç tanesi en başat özelliklerden birine uymuyor.
+
+Bilim insanı buna "istisna" demek zorunda kalır: "Bu kadarcık kusur kadı kızında da olur."
+
+### ETA Fonksiyonu Neden Var?
+
+**Soru:** Neden böyle bir fonksiyon var? Neden tıkır tıkır işlemiyor her şey? Niye istisnalar var?
+
+**Cevap 1 - Çan Eğrisi Prensibi:** ETA olmasaydı çan eğrisi oluşmazdı.
+
+**Cevap 2 - Diyalektik ve Zevç:** İnsan zevk ile (karşıtlıklarla) öğrenir. Genel düzenin dışında aksi bir şey olması lazım ki o düzeni görebilsin.
+
+Anlam zikrindeki tanım hatırlatıldı: "Diyalektik zevç uzay zaman madde enerji evreni." Diyalektik yasa çalışmalı ve her şey zevç (karşıtlık) olmalı. Yoksa insan zihni fark edebilir miydi?
+
+### Aydınlık-Karanlık Örneği
+
+Eğer bütün evren, mağaraların dipleri bile doğuştan, oluştan, ezelden beri hep aydınlık olsaydı, gölge ve karanlık diye hiçbir zerre olmasaydı, ne aydınlığın farkında olunabilirdi ne karanlığın. Hep aydınlıkta doğup hiç gölge-karanlık görmeyen insanlar aydınlığın bile farkında olamazdı.
+
+Zevçler (karşıtlıklar) olmasaydı, diyalektik bir şekilde zevçler olmasaydı bu evren nasıl olurdu? Farkındalıksızlık olurdu. Sapiens'in en ufak bir kavramı bile olamazdı. Hiçbir kavram olamazdı. Çünkü hiçbir şey, her şey zıtsız olduğunda neyin farkında olunabilirdi ki?
+
+Konuşma kabiliyeti olmazdı, düşünme olmazdı. İnsan beyni (veya taklitçi papağanların beyni) dışarıdaki olayları ve nesneleri zıtlıklarına göre yorumlayarak isimlendirebilir.
+
+**Önemli Uyarı:** "Hiçlik" kelimesi dikkatli kullanılmalıdır. Hiçlik kelimesini kullanılabileceği tek yer: "Hiçlik yok, varoluş var." Hiçlik aslında hiçbir zaman olamayan bir şeydir. Geçmişteki ariflere ve aşıklara da eleştiri yöneltildi: Benliği yok etmek için "hiçlik" kelimesini kullandılar ama bu yanlıştır, kavram kargaşası yaratır.
+
+İnsan ve dünya hayatının anlamı zikri bunu çözmüştür: Varoluş ve hiçlik, varlık ve yokluk zevçlerinden oluşan bir matris tanımlamıştır. Tarih boyunca felsefe, mistik ve bilimsel alanda sadece varlık-yokluk kelimesi kullanıldığı için kitaplar anlaşılamaz, iç tutarsızlıklar giderilemez.
+
+**Matris:**
+- Ana zevçler: Varoluş - Hiçlik
+- Alt zevçler: Varlık - Yokluk
+- "Varlıklar" (çoğul) dediğimizde nesneleri kastediyoruz
+
+### Karanlığın Formülü Meselesi
+
+Aydınlığın formülü var: Maxwell Denklemleri (dört formül). "Tanrı buyurdu: Işık olsun" (Fiat Lux - Tevrat'ın giriş ayetlerinden). Sol tarafta kadera (değişkenler), ortada eşitlik, sağ tarafta kaza var. Hepsi birleşince ışık (aydınlık) oluyor.
+
+**Peki karanlığın formülü nerede?**
+
+Karanlığın kendi başına formülü yok. Karanlık, ışık formülünün bir ya da birçok değişkeninin olmamasıdır. Taze ekmek yapmanın formülü var. Ekmeğin bayatlamasının "sebebi" ise o formüldeki bazı değişkenlerin kalkmasıdır.
+
+**Sonuç:** Karanlığın, bayatlamanın, çürümenin kendi kendilerine formülleri yok. Bunlar zevçlerinin (karşıtlarının) formülünden bir şeylerin yok olduğunda veya bittiğinde ortaya çıkan hallerdir.
+
+### ETA ve Entropi Yasası
+
+ETA fonksiyonu olmasaydı entropi yasası olmazdı. Her şey ilk formülündeki gibi kalırdı.
+
+Bu görüntüyle hatırlanmalı: Tanrı buyurdu, ışık olsun. Işığın formülü var. Bu formül evrenin başladığından beri her yerde geçerli. ETA olmasaydı karanlık diye bir şey olmazdı. ETA olmasaydı ekmek bozulmazdı. Ve ilâ ahir...
+
+**Halife bağlantısı:** Buraya bir halife atacağız. Bütün esmaları öğretilecek bu boyutta. Birinci cilt, en alt cilt burası. Dünya birinci ciltte bunları, bu kavramların tamamını ve deneyimi öğrenebilmesi için böyle bir fonksiyon gerekiyor. Çünkü Tanrı "Biz her şeyi bir ölçüyle yarattık" diyor. Negatiflerin içinde ölçü yaratmaya gerek var mı? Hayır. Ölçüyü bozarsın ETA ile.
+
+Kur'an Musafı'nda ETA fonksiyonunu açıklayan cümle: **"Kün fe yekün"** (Ol der ve olur). "Ol der ve her şey onun belirlediği formülde, ölçüde olur" şeklinde anlaşılmalıdır. "Oluverir" çevirisi yetersizdir; geniş zaman kullanılmaktadır.
+
+### Vahdet-i Vücut ve Tecelli
+
+Vahdet-i vücut inancında, panteizmlerden ayıran esas özellik Muhyiddin İbni Arabi'nin iki kelimesiyle tanımlanmıştır: **"Ondanız ve ondayız."**
+
+"Ondayız" ne demektir? Tecellinin sürekliliği. Her an tecelli. Yüzde yüz tecelli her an. Mekanik bir evren yok. Tıkır tıkır formülünü yazmış, makineyi yapmış, yazılımı yüklemiş, salmış ve uzaktan seyreden bir Tanrı anlayışı yok.
+
+Makinenin de kendisi, yazılımın da kendisi, içindeki tüm fonksiyonların da kendisi Tanrı'nın bir görünümü. Bu da "online tecelli" demek oluyor. Güneşe ayna tuttuğumuzda aynanın üstünde güneşin görüntüsünü görüyoruz (güneşin kendisini değil). Güneşin önüne bir levha koyduğumuzda aynada görüntü kaybolur. Tecelli online, sürekli. Bir an kesilse o anda görüntü kaybolur.
+
+### Kuantum ve ETA
+
+Newton her şeyin nedensellik içinde olduğunu, formülleri bulunursa olacak her şeyin tahmin edilebileceğini söyledi. Hareket kanunlarını (F=ma vb.) yazdı ve dünya şok oldu çünkü hepsi doğruydu.
+
+Ancak iki ETA çıktı:
+
+1. **Einstein'ın göreceliği:** Newton'un tarif ettiği dünyada da her şey öyle olmuyormuş. Kara deliğe yakın gidersen orada iki saat geçirip dünyaya dönersen 50 yıl geçmiş oluyor.
+
+2. **Kuantum:** Atom altı parçacıkların hiçbiri Newton'un, Einstein'ın, Maxwell'in, Planck'ın formüllerine uymuyor. Kuantum "ETA cenneti"dir.
+
+İki yüz tane atom altı parçacık (kuark ve leptonlardan başlayıp yukarı doğru) saniyenin trilyar trilyar trilyarlarında birbirine dönüşüyorlar. Tamamen kararsız ve kesinliksizler. Elektronun nerede olduğunu hiç kimse bilemez. Gözlemlediğin anda ya momentumunu kaybediyorsun ya lokasyonunu.
+
+Bu kadar kararsız yapılar atom haline geldikten sonra evrenin her yerinde kararlı yapı oluyorlar. Su, Konya'da da Avustralya'da da normal şartlar altında hep 100 santigrat derecede buharlaşıyor. CERN'de Higgs alanı bulunduktan sonra şu anda araştırılan tek şey bu çılgınca çelişkidir.
+
+### ETA Fonksiyonunun Son Tahlildeki Cevabı
+
+**Soru:** ETA fonksiyonu neden var?
+
+**Cevap:** Anlamın olması için. Halifenin bunları anlamlandırabilmesi için.
+
+Her şey halife için. İstisnalar, entropi, negatif tarafta görünen ne varsa (kötülükler, çirkin şeyler, beğenmediğimiz şeyler) hep anlamlandırılsın diye. Bunları "kötü, pis, çirkin" diye tanımlayan da halife.
+
+Halife meselesi çok önemlidir. Hayata bakıldığında, katılınmasa bile kendi içinde bir tane çelişki bulunamaz. Zerreden küreye evreni "Tanrı - Halife - Evren" olarak anlamlandırdığında tam, dosdoğru, güzelce, kendi içinde bir tane çelişki ve gri alan bulunamaz.
+
+---
+
+## İkinci Bölüm: On Bin Yıldır Nesnel, Mutlak Anlamın Bulunamamasının Nedeni
+
+### Soru
+
+Bu evrenin ve insan bireyinin nesnel, mutlak (yani herkesin hemen görüp bileceği ve kalbinde aklında zerre şüphe olmadan kabul edeceği) bir anlamının on bin yıldır bulunamamasının nedeni nedir?
+
+### Verilen Cevaplar ve Değerlendirmeler
+
+**Cevap 1:** "Bu evrenin ve insanların nesnel ve mutlak bir anlamının on bin yıldır bulunamamasının nedeni varoluş soru ve sorunları yokluk-varoluş paradoksunda boğuşup farkında olmadan yarattığı karakter benlikler ile özdeşleşmekten kurtulamamasıdır."
+- **Değerlendirme:** İyi bir cevap ama anlamı bulamamakla ilgisi net kurulamamış. Türev bir cevap.
+
+**Cevap 2:** "Halifeyiz. Her şeyi bilemediğimiz için hikaye uydurmak zorundayız. Burası Esma-yı Külla öğrenileceği yer. Burada ilahi kaos olmak zorunda ki deneyimleyerek öğrenebilsin Adem."
+- **Değerlendirme:** Kalite ve güzel bir zeminde ama "hikaye uydurmak zorundayız" ifadesi gereksiz.
+
+**Cevap 3:** "Evreni ve insanı anlamlandırma fiilinin öznesi yine nitelikli benlik farkındalıklarına sahip insan olduğundan ve insanların da birbirleriyle özdeş olmamaları nedeniyle anlamlar her bireye göre niteliksel veya en azından niceliksel olarak farklıdır. Dolayısıyla nesnel olamaz. Ayrıca anlam öznel olarak oluşturulsa bile zamanla o anlam da değişebilecektir."
+- **Değerlendirme:** Güzel bir şey ama türev cevap, ikinci-üçüncü dereceden.
+
+**Doğru Cevap:** "Anlamı kendimiz bulmalıyız. Neden? İnsan halife olduğu için."
+
+### Halifelik ve Anlam
+
+Halife kelimesinin ağırlığı hissedilmelidir. Bu basit bir kelime değildir. Kral veya cumhurbaşkanı gibi değil. **Tanrı'nın halifesi.** "Sana koskoca dünyayı vereceğiz. Al, halifesin. İstediğin gibi anlamlandır. Al deneyimi, gel."
+
+Eğer bireyin ve evrenin mutlak nesnel bir anlamı olsaydı ve bu yazılı verilseydi, herkes bunu hemencecik görseydi, taklitçi papağanlardan ne farkımız kalırdı? Donup kalırdık. Melik bile olamazdık, robot olurduk.
+
+"Tanrı niye Muhammed'den sonra peygamber göndermemiş?" diyenlere İnsan ve Dünya Hayatının Anlamı Zikri şöyle derdi: "Tanrıyı defterlere ve kalemlere hapsedemezsin." Ve şu örneği verirdi: İlkokula kadar anne çocuğun atletini aldı, giydirdi, elbiselerini aldı, ayakkabısını bağladı, her şeyi yaptı. Şimdi kırk yaşına veya yirmi beş yaşına geldin. Hâlâ ayakkabılarını annen mi bağlasın? Hâlâ yemeğini annen mi yedirsin?
+
+### Özgürlük Olarak Anlam
+
+Herkesin kalbini aynı anda, tam, çabucak mutmain edecek nesnel ve mutlak bir anlamın bulunamaması belki bir lanet değil, bir özgürlüktür. Herkes kendi anlamını ve bu evrenin anlamını kendi istediği gibi belirlesin diye bırakılmış bir fırsat olarak düşünülebilir.
+
+"Kendinizi kandırıyorsunuz" diyenlere: "Siz ne yapıyorsunuz? Sanki bütün her şeyin mutlak anlamını bulmuşsunuz da harika, huzur, mutluluk dolu hayatlar, sıfır nevroz, sıfır depresyon, sıfır ızdırapla yaşıyorsunuz."
+
+Mesele bu dünyada kendini kandırıp kandırmamak değildir. Kendini ne kadar iyi kandırıp kandıramadığındır. Buradaki "kandırmak" olumsuz manada değildir. Asla bilemeyeceğin alanlarda, kendi iç tutarlılığında seni mutmain edecek bir zemin kurabilmektir.
+
+### Zikrin Adı
+
+Zikrin adına dikkat edilmelidir: "İnsan ve Dünya Hayatının Anlamı." Birinci katman: insan (Sapiens) ve dünya hayatının anlamı. En çok itilip kakılmış ikisi zikrin adına konmuş. Non-dualistlerin, dincilerin, felsefecilerin, bilim insanlarının çoğunluğunun hiç kale almadığı "beden, insan, hiçbir anlamı yok" dedikleri şeyler.
+
+Halife yapılacaksın. Varoluşsal benliğin sorunları olmaz. Deneyimi üzerinden deneyimlediğimiz varlıklardan biri de şereflendirilmiş: Sapiens. "Bir kişilik ümmet sana verilmiş Sapiens."
+
+---
+
+## Üçüncü Bölüm: Kur'an Musafı'ndaki Vahdet-i Vücut Ayetleri
+
+### Genel Değerlendirme
+
+Bir arkadaş şöyle yazmış: "Kur'an Musafı tam bir tevhid kitabıdır. Tevhid ayetleri var. Orada vahdet-i vücuda böyle direkt ayetler yok. Ama illa söylenebilecekse şu üç-dört-beş ayet olabilir."
+
+Bu çok güzel bir saplamadır. Peygamberler geldikleri toplumlarda insanları tevhidi kaybetmiş, ikinci parçalanmaya uğramış halde buldular. Her şeye Tanrı diyorlardı. Peygamberlerin birinci görevi insanları bu ikinci parçalanmadan en azından tevhide getirmekti ve bunu başardılar.
+
+Kurumsal dinlere atfedilen kutsal kitapların çok büyük yüzdeleri tevhid ayetleridir. Önce ikinci kırılmayı, o insanların bilincindeki inanç kısmını düzeltmeyi, toplumsal ve bireysel ahlakı düzeltmeyi amaç edinmişlerdir.
+
+Muhyiddin İbni Arabi de bunu söylemiştir: "İşin şeriat, tarikat ve tevhid mertebesini peygamberler halletti. Hakikat ve marifet, onların varisleri olan bizlere bırakıldı."
+
+### Ehad ve Samet
+
+"Ehad" ve "Samet" birlikte söylenmelidir. Sadece "Samet" diye bir kullanım görülmemiştir. Arthur Schopenhauer bile özne-nesne ayrımı olmaz, varlık tektir derken aslında "Ehad ve Samet"i söylemektedir.
+
+- **Ehad:** Zatında tek (Vahit çokluktan oluşan birliktir, Ehad ise zatında tektir)
+- **Samet:** Bölünmez, hiçbir şeye muhtaç olmayan
+
+Bu ikisi birlikte söylendiğinde bütünü kasteder. Abdülmelik Bin Mervan bile bastığı sikkelerde bolca "Ehad ve Samet" yazdırmıştır.
+
+### Bhagavad Gita'dan Vahdet Bölümü
+
+Bir arkadaş Kur'an Musafı'nda vahdet-i vücuda yakın bir şey hissedememiş, Bhagavad Gita'nın 13. bölümünü en yakın gelen vahdet bölümü olarak belirtmiştir. Bu bölümden (13:13 ve devamı):
+
+> "Size bilinmesi gerekeni ve bilmekle ölümsüzlüğe ulaşılacağını açıklayacağım. Bu varoluşun ve yokluğun ötesinde bulunan, başlangıcı olmayan Brahman'dır. Onun elleri, ayakları, gözleri, başları ve yüzleri her yerdedir. Kulakları da her yerdedir. Çünkü o evrendeki her şeye nüfuz eder (içkindir). O tüm duyusal nesneleri algılar fakat duyulardan yoksundur. Hiçbir şeye bağımlı değildir fakat her şeyin rızık vericisidir. Niteliklerden yoksundur fakat maddi doğanın üç halinin de (iyilik, cehalet ve tutku) tadını çıkarır."
+
+> "O hareket eden ve hareket etmeyen tüm canlı varlıkların içinde ve dışında mevcuttur (hem içkin hem aşkın). O inceliklidir, bu nedenle kavranamaz. Çok uzaktır (aşkın) ama aynı zamanda çok yakındır. O bilgidir, bilginin nesnesidir ve bilginin hedefidir. Tüm canlı varlıkların kalbinde ikamet eder."
+
+Bu son cümle, ariflerin ve aşıkların "Tanrı alemlere sığmadı da insanın kalbine sığdı, gönlüne sığdı" demesiyle aynıdır.
+
+### Enfal 17
+
+Bedir Savaşı sonrasında inen bu ayet çok açıktır:
+
+> "Onları öldüren siz değildiniz. Onları gerçekte Allah öldürdü. Attığın zaman sen atmadın. Gerçekte Allah attı. Müminleri güzel bir deneyimle imtihan ederek onlara deneyimletmek için böyle yaptı. Hiç şüphesiz ki Allah her şeyi işitiyor ve biliyor."
+
+Bu kadar açık söylenir mi? "Sen atmadın mızrağı, Allah attı. Onları siz öldürmediniz, Ben öldürdüm."
+
+Klasik Sünni Müslümanların vahdet-i vücut mensuplarına karşı hiç hoşlanmadıkları bir ayettir. Tevil edilebilir ama bayağı zor, kırk sayfa yazmak gerekir.
+
+**Emevi kullanımı:** Emeviler (özellikle Abdülmelik Bin Mervan) bu tip ayetleri bulup kurnazca kullandılar. "Ammar'ı siz öldürdünüz" dendiğinde "Saçmalama, biz kimiz öldürebiliriz? Onu Allah öldürdü" dediler. "Hüseyin'i Kerbela'da siz öldürdünüz" dendiğinde "Bak Enfal 17 var" dediler.
+
+### Nur 35 (Nur Ayeti)
+
+> "Allah göklerin ve yeryüzünün nurudur."
+
+Dikkat: "Min Allah" (Allah'tandır) demiyor. "Allah göklerin ve yerin nurudur" diyor. Bu çok açık ayetlerden biridir.
+
+Devamında farka iniliyor:
+
+> "Onun nuru şu örnekteki gibidir: Duvardaki oyukta bulunan ve içinde olduğu kristal camı incimsi bir yıldız gibi parlatan bir kandil. Kandilin içindeki yakıtı dünyada hiçbir yerde yetişmeyen mübarek bir zeytin ağacından elde edilmiştir ki o yağ hiç tutuşturulmasa da kendiliğinden nur saçar. Hiç tükenmeden nur üstüne nur saçar (nurun ala nur). Allah hak edenleri bu nuruna iletir. Allah insanlar için böyle örnekler veriyor. Hiç şüphesiz ki Allah her şeyi biliyor."
+
+### Kandil Kimdir? (Ahzab 45-46)
+
+Bu teşbihli anlatımdaki kandilin kimi işaret ettiği için Ahzab 45-46'ya bakılır:
+
+> "Ey Nebi, biz seni tanık, haber veren ve uyarıcı olarak gönderdik. Onun izniyle Allah'a çağıran ve aydınlatan bir kandil olarak."
+
+**Kandil Muhammed Peygamberdir.**
+
+Muhammed Peygamber'in teşbihle anlatılması:
+- İncimsi bir yıldız gibi camı, dışı parlak
+- İçindeki yakıt: Vahiy
+- Dünyada hiçbir yerde yetişmeyen mübarek zeytin ağacından: Tanrı'dan gelen vahiy
+- Hiç tutuşturulmasa bile kendiliğinden nur saçar: Durduğu yerde bile aydınlatır
+- Nur üstüne nur: Katmanlı
+
+### Bakara 115
+
+> "Her nereye dönerseniz onun yüzü oradadır."
+
+Bu ayet ontolojik manada vahdet ayeti değildir. Kıble konusunun ikinci katman ayetidir. Kıble ikinci katman anlamıyla "sığınılacak yer" demektir. Mekke'den kovulan Muhammed Peygamber'e yeni kıble olarak Medine'de ona kucak açan müminleri gösterilmiştir.
+
+"Kutsal şehir Mekke'de olmazsan, Kudüs'te olmazsan, Vatikan'da olmazsan kutsal adam olamazsın" diyen seçkinci din anlayışına karşı "Doğu da batı da Allah'ındır. Yüzünü ne yöne dönersen Allah oradadır. Her yer Allah'ındır. Sen yeter ki adam olmaya niyet et, istersen çöllerde ol, istersen dağ başlarında ol" demektir.
+
+### Kasas 88
+
+> "Allah'la beraber sakın başka bir tanrı edinip ona dua etme. Ondan başka ilah yoktur. Onun kendisinden başka her şey yok olacaktır (helak olacaktır)."
+
+Dikkat: "Allah'tan başka" değil, "Allah ve başka bir tanrı" (yani iki-üç-dört-beş tanrı alıp dua etme) diyor. Şirk koşma diyor.
+
+"Kullu şeyin halikun illa vechehu" - Onun vechinden (zatından) başka her şey helak olacaktır (yok olacaktır).
+
+Bu son tahlilde vahdet-i vücut işaretidir. Onun dışında her şey yok olacaktır demek zaten yoktur demektir. Varlığını kendinden almayanlara "mümkün varlık" denir, yani töz değiller.
+
+### Rahman 26-27
+
+> "Üzerindeki her şeyin bir sonu vardır, yok olacaktır (fanidir). Yalnız bütün yüceliğin ve şerefin sahibi olan Rabbinin kendisi baki kalacaktır."
+
+"Kullu men aleyha fanin" - Üzerindeki her şey fanidir.
+"Ve yabga vechu Rabbike zülcelali vel ikram" - Rabbinin vechi (zatı) baki kalacaktır.
+
+### Hadid 3
+
+> "O evveldir (el-Evvel), ahirdir (el-Ahir), zahirdir (el-Zahir), batındır (el-Batın). O her şeyi biliyor."
+
+Hem görünür hem görünmeyendir. Hem içkin hem aşkındır. Bütün anlamlara gelir. Aslında "tanımlanamaz" demektir. Oraya kadardır insan idrakinin tanımlaması.
+
+### Kaf 16
+
+> "Hiç şüphesiz ki insanı biz yarattık. Nefsinin ona bu vesveseleri verdiğini biliyoruz. Çünkü biz ona şah damarından daha yakınız."
+
+"Şah damarından daha yakın" o günkü Arap toplumunda, özellikle Kureyş Araplarının birbirleri için kullandıkları bir deyimdi. Onlar için yakınlık, aile bağları, soy, kan bağları çok önemliydi.
+
+Birinci katmandan bu, çok yakın olmak, her şeyini bilmek anlamına gelir. İkinci katmandan bakılırsa: Şah damarı insanın içinde ve hayati bir damardır, beyni besler. Ondan daha yakın olabilmek için ancak "ondan ve onda" olmak gerekir.
+
+### İrade ve Meşiyet Meselesi
+
+Kur'an'da iki kelime kullanılır:
+- **Erade (irade):** Ahzab 17, Zümer 4, Fetih 11, Cin 10, Müddessir 31 gibi ayetlerde
+- **Şaye (meşiyet/dilemek):** "İnşallah" (Allah dilerse) kelimesindeki "şa" kökünden
+
+**Tekvir 29:**
+> "Alemlerin Rabbi olan Allah dilemedikçe siz hiçbir şey dileyemezsiniz."
+
+"Ve ma teşaune illa en yaşaallahu Rabbul alemin"
+
+Bu ayeti kullanarak felsefe tarihinde çok kişi "insanın özgür iradesi olamaz" demiştir. Spinoza'nın savunduğu tek töz, tek irade anlayışı. Cebriyeci ekolün mensupları da bu ayeti çok kullanmıştır.
+
+**Paradoks:** Bir yerde "Allah dilemedikçe siz dileyemezsiniz" (mutlak cebir gibi görünüyor), diğer yerlerde "yapıp ettikleriniz kendi ellerinizle işledikleriniz yüzündendir" (özgür irade gibi görünüyor).
+
+Fahrettin Razi bir anekdot anlatır: Bir gün cebriyecilerle kaderiyeciler bir mescitte tartışacaklar. Hakemler "birinci delilinizi söyleyin" dedi. İkisi de aynı ayeti delil getirdi. Yüz seksen derece zıt iki görüş, birinci delilleri olarak aynı ayeti gösterdi. Çünkü ayet öyle bir ayet ki ilk okumada cebriyeciler haklı gibi, ikinci okumada kaderiyeciler haklı gibi görünür.
+
+Fahrettin Razi tefsirinin sonunda meşhur cümlesini söyler: "Bu Kur'an Musafı öyle bir kitap ki herkes bütün ayetleri kendi inancına, anlayışına, mezhebine, meşrebine göre yorumlayabilir. Ama zaten biz de bundan başka bir şey yapmıyoruz."
+
+**Çözüm:** Tanrı - Halife - Alem. Bunu koydun mu bütün gri alanlar netlenir.
+
+- **Cemden okuyunca:** Tabii ki mutlak irade cemde tek tözden. Başka irade olamaz. Ateist filozoflar bile biliyor bunu. Tek töz varsa tek irade olur.
+- **Farktan okuyunca:** Töz olmayan varlıkların şu kadarcık bile iradesi olabilir mi? Haşa. Ama bir tane var: Halife. En azından kendiyle ilgili konularda, kendi anlamı, kendi Sapiens'inin bazı yönlerini kendisi "şaye" yapabiliyor.
+
+Cemden bakıldığında yine o bir yansıma, Tanrı ona verdiği için yapıyor.
+
+---
+
+## Dördüncü Bölüm: Ayna Metaforu ve "Ayna Kendini Görebilir Mi?" Sorusu
+
+### Muhyiddin İbni Arabi'nin Tanımı
+
+Muhyiddin İbni Arabi demişti ki: "Alem, Tanrı'yı fiil ve sıfatlarıyla gösteren bir aynadır. İnsan da bu aynanın cilasıdır." Yani camın üstündeki gümüşlü sırdır.
+
+### Ayna Nasıl Çalışır?
+
+**Soru:** Camın üzerine sürülen gümüş sır, hangi özelliğinden dolayı (ne yaparak) camı aynaya çeviriyor?
+
+**Cevap:** Işığı aksettirme özelliği. Karşısındaki cisimden üzerine gelen fotonları cam saydam olduğu için yansıtamıyor, öbür tarafa geçiliyor. Oysa gümüş sır sürülünce fotonlar geri yansıyor ve bakanın gözüne girmelerini sağlayarak gösteriyor.
+
+Ayna dediğimiz şey, üzerindeki gümüş sır olmasaydı aslında sadece cam olurdu. Yani alemin nesnelerinden bir nesne.
+
+### Halife Bağlantısı
+
+Evrendeki trilyonlarca cam var (nesneler, varlıklar alemi). O camlardan bir tanesine gümüşlü sır sürüldü: Sapiens'e FBS (Fonksiyonel Benlik Sistemi) yüklendi.
+
+Şimdi o alemdeki her şeyi gösteriyor. Her şeyin tanımını, anlamını verebiliyor. Bir şeyin özelliklerini, tanımını, anlamını verebilmek Tanrı kavramının niteliklerindendir.
+
+Bu durumuna bir sıfat bulmak gerekirse tam, eksiksiz kelime eski Arapça'daki **"halife"** olurdu.
+
+Güneşten gelen fotonları gümüşlü sırıyla (FBS'iyle) yansıtıyor ve nesneleri görünür kılıyor. Tam bir halife. Ayna fotona kıymet etmez, üzerine geleni yansıtır. Sadece iyi tarafları değil, ne geliyorsa onu yansıtır.
+
+Gösterdiği nesnelerin somut kendileri değildir, sadece görüntüleridir. Güneşe ayna tutarsan güneşi göstermez, güneşin görüntüsünü gösterir. Hakikat yedi kat düşüyor buraya gelene kadar ama niteliği aynı.
+
+### Kritik Soru: Ayna Kendini Görebilir Mi?
+
+Ayna her şeyi gösteriyor, görünür kılıyor. **Peki bir ayna kendini görebilir mi? Ya da bir göz kendini görebilir mi?**
+
+**Genel cevap:** Hiçbir ayna kendini göremez. Bir aynanın kendini görebilmesi için başka bir ayna gerekir.
+
+Bu doğrudur ama ikinci-üçüncü derece cevaplardır.
+
+### Postülat
+
+"Gözlemci, gözlemlenenin kendisi değildir, olamaz." Bu nedenle hiçbir ayna kendini göremez. Hiçbir şey kendini göremez.
+
+### Büyük Farkındalık
+
+**Ama** burada kendini görebilen bir ayna var: **İnsan.**
+
+"Kendimi görebiliyorum. Gözümle görmekten bahsetmiyorum. Nitelikli benliğimin farkındayım. Derinlemesine gittiğimde içimde birçok benliklerim olduğunu görüyorum. Dışarı çıkıp kendimi gözlemleyebiliyorum. Üzüntülü, sevinçli diyebiliyorum. Bu ayna kendini de görüyor."
+
+Oysa hiçbir ayna kendini göremez. Gözlemleyen gözlenebilenin kendisi olamaz. Bu bir postülat.
+
+Ama hemen altına şu konur: **"İnsan, kendi benliğinin farkında olan tek canlı."**
+
+Bu kainattaki en büyük postülat, en büyük ayet. Birinci katta söylenen şey: "Gözlemleyen gözlemlenenin kendisi olabilir mi?" Saçmalama, olur mu öyle şey. Altına öbür cümleyi gösterince herkes susar.
+
+### "Hepimiz Yıldız Tozuyuz" Eleştirisi
+
+Bazıları "hepimiz yıldız tozuyuz" diyor. İnanılmaz bir şey. Bir grup insan, hatta bilim insanı olabilecek kadar IQ'ları yüksek insanlar, "hepimiz yıldız tozuyuz, insan Sapiens aynı" diyorlar.
+
+Beden yönümüz için birebir özdeşiz, hepimiz kuark ve lepton. Ama bizde bittik fazlalık yok mu? Bunu nasıl kendi içinde yaşadığın bir mucizeyi inkar ettirir bir insan? İdeolojik cinnet kendi ayetini inkar ettirir insana.
+
+"Hepimiz yıldız tozuyuz" diyebilmek için kaç bin yıl uğraşıldı, gelindi, neler akledildi, elendi, denendi, gözlemlendi, en sonunda söylenebildi. Bunu sincaplar niye yapamıyor? Kiraz ağacı bunu niye yapamıyor? Güneş bunu niye yapamıyor? Dağlar niye yapamıyor? Şempanzeler, goriller, orangutanlar bunu niye yapamadı? Niye onlar "hepimiz yıldız tozuyuz" diyemedi?
+
+### İki Büyük Ayet (Ayet-el Kübra)
+
+Bu zikir on beş sene boyunca insanlığın hepsine ulaşabildiği herkese bu büyük ayeti (ayet-el kübra) hakkal-yakin göstermek için çabaladı:
+
+1. **Hiçlik yok, varoluş var.**
+2. **İnsan, bu evrendeki nitelikli benliğinin farkındaki bu gezegendeki varlıktır. Onda tanrısal özellikler vardır.**
+
+Bu ikisini aldın mı artık...
+
+---
+
+## Kapanış
+
+Non-dualistler konusu (Azize Şahin ve Jeff Foster videoları) vakit yetersizliği nedeniyle cuma gününe ertelenmiştir. Bu videolar dikkatle izlenmeli, kendi zikirle değerlendirilmeli, nerelerin çelişkili olduğu, nerelerde eksiklikler bulunduğu tespit edilmelidir.
+
+**Son söz:**
+> "Gördüğümüz, görmediğimiz, bildiğimiz, bilmediğimiz, üzerimizdeki bütün lütufları için çok derin saygımız, büyük aşkımız, sonsuz minnettarlığımız ve büyük müveddetimiz Onadır. Umutsuz biz yokuz. İlla Hu."
